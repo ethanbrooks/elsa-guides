@@ -12,7 +12,8 @@ public class WeatherForecastWorkflow : WorkflowBase
 {
     protected override void Build(IWorkflowBuilder builder)
     {
-        var serverAddress = new Uri(Environment.GetEnvironmentVariable("ASPNETCORE_URLS")!.Split(';').First());
+//        var serverAddress = new Uri(Environment.GetEnvironmentVariable("ASPNETCORE_URLS")!.Split(';').First());
+        var serverAddress = new Uri("https://workflow-client-app");
         var weatherForecastApiUrl = new Uri(serverAddress, "weatherforecast");
         var weatherForecastResponseVariable = builder.WithVariable<ICollection<WeatherForecast>>();
 

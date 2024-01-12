@@ -9,7 +9,7 @@ var configuration = builder.Configuration;
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContextFactory<OnboardingDbContext>(options => options.UseSqlite("Data Source=onboarding.db"));
+builder.Services.AddDbContextFactory<OnboardingDbContext>(options => options.UseSqlite("Data Source=onboarding.sqlite"));
 builder.Services.AddHostedService<MigrationsHostedService>();
 
 // Configure Elsa API client.

@@ -15,7 +15,7 @@ builder.Services.AddElsa(elsa =>
     // Default Identity features for authentication/authorization.
     elsa.UseIdentity(identity =>
     {
-        identity.TokenOptions = options => options.SigningKey = "sufficiently-large-secret-signing-key"; // This key needs to be at least 256 bits long.
+        identity.TokenOptions = options => options.SigningKey = "018cec60-06c1-7f08-ab16-d1ed4230bcc7"; // This key needs to be at least 256 bits long.
         identity.UseAdminUserProvider();
     });
 
